@@ -4,7 +4,7 @@ import VideoPlayer from "../components/VideoPlayer";
 const battleBoxes = [
     {
         id: 1,
-        imgSrc: "../../src/assets/imgs/zoro-king.png",
+        imgSrc: "/assets/imgs/zoro-king.png",
         altText: "Zoro vs King",
         animeName: "ONE PIECE",
         battleName: "R. Zoro vs King",
@@ -13,7 +13,7 @@ const battleBoxes = [
     },
     {
         id: 2,
-        imgSrc: "../../src/assets/imgs/goku-jiren.png",
+        imgSrc: "/assets/imgs/goku-jiren.png",
         altText: "Goku vs Jiren",
         animeName: "DB SUPER",
         battleName: "S. Goku vs Jiren",
@@ -22,7 +22,7 @@ const battleBoxes = [
     },
     {
         id: 3,
-        imgSrc: "../../src/assets/imgs/ichi-aizen.png",
+        imgSrc: "/assets/imgs/ichi-aizen.png",
         altText: "Kurosaki vs Aizen",
         animeName: "BLEACH",
         battleName: "I. Kurosaki vs S. Aizen",
@@ -31,7 +31,7 @@ const battleBoxes = [
     },
     {
         id: 4,
-        imgSrc: "../../src/assets/imgs/sukuna-mahoraga.png",
+        imgSrc: "/assets/imgs/sukuna-mahoraga.png",
         altText: "Sukuna vs Mahoraga",
         animeName: "JUJUTSU KAISEN",
         battleName: "Sukuna vs Mahoraga",
@@ -40,7 +40,7 @@ const battleBoxes = [
     },
     {
         id: 6,
-        imgSrc: "../../src/assets/imgs/shanks-kid.png",
+        imgSrc: "/assets/imgs/shanks-kid.png",
         altText: "Shanks vs kid",
         animeName: "ONE PIECE",
         battleName: "S. Shanks vs E. kid",
@@ -49,7 +49,7 @@ const battleBoxes = [
     },
     {
         id: 7,
-        imgSrc: "../../src/assets/imgs/yhwach-yamamoto.png",
+        imgSrc: "/assets/imgs/yhwach-yamamoto.png",
         altText: "Yhwach vs Yamamoto",
         animeName: "BLEACH",
         battleName: "Yhwach vs Yamamoto",
@@ -58,7 +58,7 @@ const battleBoxes = [
     },
     {
         id: 8,
-        imgSrc: "../../src/assets/imgs/shutara-quincy.png",
+        imgSrc: "/assets/imgs/shutara-quincy.png",
         altText: "Shutara vs Quincy",
         animeName: "BLEACH",
         battleName: "S. Shutara vs Quincy",
@@ -67,7 +67,7 @@ const battleBoxes = [
     },
     {
         id: 9,
-        imgSrc: "../../src/assets/imgs/astayami-dante.png",
+        imgSrc: "/assets/imgs/astayami-dante.png",
         altText: "Goku vs Jiren",
         animeName: "BLACK CLOVER",
         battleName: "Asta & Yami vs Dante",

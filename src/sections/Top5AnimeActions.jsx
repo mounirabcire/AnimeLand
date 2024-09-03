@@ -7,8 +7,8 @@ const topAnimeActions = [
         name: "One Piece",
         description:
             "is an epic adventure where Monkey D. Luffy and his crew sail the vast oceans in search of the legendary treasure, the One Piece. With thrilling battles, unforgettable characters, and a quest to become the Pirate King, One Piece is a journey full of excitement, camaraderie, and the relentless pursuit of dreams!",
-        videoSrc: "./../../src/assets/vids/one-piece_edit.mp4",
-        imgSrc: "./../../src/assets/imgs/topanime-onepiece.jpg",
+        videoSrc: "/assets/vids/one-piece_edit.mp4",
+        imgSrc: "/assets/imgs/topanime-onepiece.jpg",
         className: "onepiece",
         bestMomentSrc:
             "https://www.youtube.com/embed/zbL4e0NTE08?si=kNAGHtRVUtEL0zyC",
@@ -18,8 +18,8 @@ const topAnimeActions = [
         name: "Bleach",
         description:
             "follows Ichigo Kurosaki as he becomes a Soul Reaper to battle evil spirits and protect both worlds. With intense battles and unforgettable characters, it’s a thrilling journey of honor and duty!",
-        videoSrc: "./../../src/assets/vids/bleach_edit.mp4",
-        imgSrc: "./../../src/assets/imgs/topanime-bleach.jpg",
+        videoSrc: "/assets/vids/bleach_edit.mp4",
+        imgSrc: "/assets/imgs/topanime-bleach.jpg",
         className: "bleach",
         bestMomentSrc:
             "https://www.youtube.com/embed/-kcQCLcrOls?si=cBkaCQienjZffqKy",
@@ -29,8 +29,8 @@ const topAnimeActions = [
         name: "Dragon Ball Super",
         description:
             "is an epic saga of power and adventure, following Goku as he battles legendary foes and seeks the mystical Dragon Balls. With nonstop action and unforgettable characters, it's the ultimate journey of strength and friendship!",
-        videoSrc: "./../../src/assets/vids/dbsuper_edit.mp4",
-        imgSrc: "./../../src/assets/imgs/topanime-dbsuper.jpg",
+        videoSrc: "/assets/vids/dbsuper_edit.mp4",
+        imgSrc: "/assets/imgs/topanime-dbsuper.jpg",
         className: "dbsuper",
         bestMomentSrc: "https://www.youtube.com/embed/lJzCsj3aP3k?si=gNUeHcoL2Ws90NmT",
     },
@@ -39,8 +39,8 @@ const topAnimeActions = [
         name: "Jujutsu Kaisen",
         description:
             "is a gripping tale of sorcery and survival, where Yuji Itadori battles deadly curses in a world full of danger. With intense fights and powerful magic, it’s a thrilling journey into the dark side of the supernatural!",
-        videoSrc: "./../../src/assets/vids/jjk_edit.mp4",
-        imgSrc: "./../../src/assets/imgs/topanime-jjk.jpg",
+        videoSrc: "/assets/vids/jjk_edit.mp4",
+        imgSrc: "/assets/imgs/topanime-jjk.jpg",
         className: "jjk",
         bestMomentSrc: "https://www.youtube.com/embed/slv9r2s5g_Y?si=0WqR9yErIbUcF46z",
     },
@@ -49,8 +49,8 @@ const topAnimeActions = [
         name: "Black Clover",
         description:
             "is a magical journey of determination and rivalry! Follow Asta, a boy born without magic in a world where it’s everything, as he strives to become the Wizard King. With intense battles, powerful spells, and an unbreakable spirit, Black Clover is a tale of never giving up and defying all odds!",
-        videoSrc: "./../../src/assets/vids/blackcl_edit.mp4",
-        imgSrc: "./../../src/assets/imgs/topanime-bleackclover.jpeg",
+        videoSrc: "/assets/vids/blackcl_edit.mp4",
+        imgSrc: "/assets/imgs/topanime-bleackclover.jpeg",
         className: "blackcl",
         bestMomentSrc: "https://www.youtube.com/embed/r9za-dDhYgw?si=oBRkP5pV-1M1JKwm",
     },

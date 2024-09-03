@@ -5,33 +5,33 @@ import TopBattlesList from "./../components/TopBattlesList";
 const battles = [
     {
         car1Name: "R. Zoro",
-        car1Img: "./../src/assets/imgs/header-zoro2.png",
+        car1Img: "/assets/imgs/header-zoro2.png",
         car2Name: "King",
-        car2Img: "./../src/assets/imgs/header-king.png",
+        car2Img: "/assets/imgs/header-king.png",
     },
     {
         car1Name: "S. Goku",
-        car1Img: "./../src/assets/imgs/header-goku.png",
+        car1Img: "/assets/imgs/header-goku.png",
         car2Name: "Jiren",
-        car2Img: "./../src/assets/imgs/header-jiren.png",
+        car2Img: "/assets/imgs/header-jiren.png",
     },
     {
         car1Name: "S. Shanks",
-        car1Img: "./../src/assets/imgs/header-shanks.png",
+        car1Img: "/assets/imgs/header-shanks.png",
         car2Name: "E. Kid",
-        car2Img: "./../src/assets/imgs/header-kid.png",
+        car2Img: "/assets/imgs/header-kid.png",
     },
     {
         car1Name: "I. Kurosaki",
-        car1Img: "./../src/assets/imgs/header-itchi.png",
+        car1Img: "/assets/imgs/header-itchi.png",
         car2Name: "S. Aizen",
-        car2Img: "./../src/assets/imgs/header-aizen.png",
+        car2Img: "/assets/imgs/header-aizen.png",
     },
     {
         car1Name: "S. Gojo",
-        car1Img: "./../src/assets/imgs/header-gojo.png",
+        car1Img: "/assets/imgs/header-gojo.png",
         car2Name: "T. Fushiguro",
-        car2Img: "./../src/assets/imgs/header-fushi.png",
+        car2Img: "/assets/imgs/header-fushi.png",
     },
 ];
 function Hero() {
@@ -79,22 +79,23 @@ function Hero() {
                 </div>
                 <div className="header--right header--right--sm">
                     <video
-                        ref={video}
+                        // ref={video}
                         autoPlay
                         loop
                         playsInline
                         controls={false}
-                        muted={isMuted}
+                        // muted={isMuted}
+                        muted
                         className="header__video header__video--onepiece"
                     >
                         <source
-                            src="./../../src/assets/vids/zoro_edit.mp4"
+                            src="/assets/vids/zoro_edit.mp4"
                             type="video/mp4"
                         />
                         Your browser is too old!
                     </video>
 
-                    <span
+                    {/* <span
                         className="header__expand-icon"
                         onClick={toggleExpandVideo}
                     >
@@ -110,11 +111,11 @@ function Hero() {
                         ) : (
                             <i className="ri-volume-up-fill"></i>
                         )}
-                    </span>
+                    </span> */}
                 </div>
                 <div className="header__zoro-img-box">
                     <img
-                        src="./../../src/assets/imgs/header-zoro.png"
+                        src="/assets/imgs/header-zoro.png"
                         alt="Zoro"
                         className="header__zoro-img"
                     />
@@ -129,13 +130,13 @@ function Hero() {
                     className="header__video header__video--onepiece"
                 >
                     <source
-                        src="./../../src/assets/vids/zoro_edit.mp4"
+                        src="/assets/vids/zoro_edit.mp4"
                         type="video/mp4"
                     />
                     Your browser is too old!
                 </video>
 
-                <span
+                {/* <span
                     className="header__expand-icon"
                     onClick={toggleExpandVideo}
                 >
@@ -148,7 +149,7 @@ function Hero() {
                     ) : (
                         <i className="ri-volume-up-fill"></i>
                     )}
-                </span>
+                </span> */}
             </div>
         </header>
     );
