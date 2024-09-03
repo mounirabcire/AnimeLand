@@ -83,16 +83,16 @@ const sepVariants = {
 };
 
 const links = [
-    { name: "One Piece", src: "../../src/assets/imgs/menu-onepiece.png" },
-    { name: "Bleach", src: "../../src/assets/imgs/menu-bleach.png" },
+    { name: "One Piece", src: "/assets/imgs/menu-onepiece.png" },
+    { name: "Bleach", src: "/assets/imgs/menu-bleach.png" },
     {
         name: "Dragon Ball Super",
-        src: "../../src/assets/imgs/menu-dbsuper.png",
+        src: "/assets/imgs/menu-dbsuper.png",
     },
-    { name: "Jujutsu Kaisen", src: "../../src/assets/imgs/menu-jjk.png" },
+    { name: "Jujutsu Kaisen", src: "/assets/imgs/menu-jjk.png" },
     {
         name: "Black Clover",
-        src: "../../src/assets/imgs/menu-blacklclover.png",
+        src: "/assets/imgs/menu-blacklclover.png",
     },
 ];
 

@@ -14,7 +14,7 @@ function NavBar() {
             <nav className="nav">
                 <div className="nav__logo-box">
                     <img
-                        src="./../../src/assets/imgs/logo.svg"
+                        src="/assets/imgs/logo.svg"
                         alt="Logo"
                         className="nav__logo"
                     />
