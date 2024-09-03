@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useState } from "react";
-import TopBattlesList from "../components/topBattlesList";
+import TopBattlesList from "./../components/TopBattlesList";
 
 const battles = [
     {
