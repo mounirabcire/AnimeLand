@@ -1,0 +1,12 @@
+-- playsInline attribute
+-- exit: {
+        scaleY: 0,
+        transformOrigin: "bottom",
+        transition: {
+            duration: 0.9,
+            ease: [0.69, 0.02, 0.52, 0.91],
+            staggerChildren: 0.01, // Staggers children when exiting
+            staggerDirection: -1, // Staggers in reverse order during exit
+            when: "afterChildren", // Ensures children animations complete before parent animates out
+        },
+    },

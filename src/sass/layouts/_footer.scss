@@ -1,0 +1,11 @@
+.footer {
+    grid-column: 1 / -1;
+    margin: 9rem 0 1.6rem;
+    text-align: center;
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 0.8rem;
+        width: 13rem;
+    }
+}

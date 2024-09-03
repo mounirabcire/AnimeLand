@@ -1,0 +1,50 @@
+// Font Sizes
+.scale-step-6 {
+    font-size: 7.8rem;
+    line-height: 11rem;
+
+    @include respond(ph) {
+        font-size: 6.8rem;
+        line-height: 9rem;
+    }
+}
+
+.scale-step-5 {
+    font-size: 5.8rem;
+    line-height: 8.6rem;
+}
+
+.scale-step-4 {
+    font-size: 4.2rem;
+    line-height: 6.6rem;
+}
+
+.scale-step-3 {
+    font-size: 3rem;
+    line-height: 5rem;
+}
+
+.scale-step-2 {
+    font-size: 2.2rem;
+    line-height: 3.8rem;
+}
+
+.scale-step-1 {
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+
+// Heading
+.heading--primary {
+    font-weight: 100;
+}
+
+.heading--secondary {
+    text-align: center;
+    font-weight: 100;
+}
+
+.heading--secondary span,
+.heading--primary span {
+    color: var(--primary-color);
+}

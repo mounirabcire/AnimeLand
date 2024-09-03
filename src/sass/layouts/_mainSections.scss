@@ -1,0 +1,32 @@
+.main {
+    grid-column: 1 / -1;
+
+    .heading--secondary{
+        margin-top: 9rem;
+    }
+}
+
+.scroll-into {
+    margin-top: 3.2rem;
+    height: 350vh;
+    position: relative;
+
+    &__container {
+        height: 100vh;
+        // width: 100%;
+        // background-color: red;
+        display: flex;
+        position: sticky;
+        top: 0;
+        overflow: hidden;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: 0px; /* Hide scrollbar for Firefox */
+        -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+
+        &::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for WebKit-based browsers */
+        }
+    }
+}
