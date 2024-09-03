@@ -32,7 +32,8 @@ const topAnimeActions = [
         videoSrc: "/assets/vids/dbsuper_edit.mp4",
         imgSrc: "/assets/imgs/topanime-dbsuper.jpg",
         className: "dbsuper",
-        bestMomentSrc: "https://www.youtube.com/embed/lJzCsj3aP3k?si=gNUeHcoL2Ws90NmT",
+        bestMomentSrc:
+            "https://www.youtube.com/embed/lJzCsj3aP3k?si=gNUeHcoL2Ws90NmT",
     },
     {
         id: 4,
@@ -42,7 +43,8 @@ const topAnimeActions = [
         videoSrc: "/assets/vids/jjk_edit.mp4",
         imgSrc: "/assets/imgs/topanime-jjk.jpg",
         className: "jjk",
-        bestMomentSrc: "https://www.youtube.com/embed/slv9r2s5g_Y?si=0WqR9yErIbUcF46z",
+        bestMomentSrc:
+            "https://www.youtube.com/embed/slv9r2s5g_Y?si=0WqR9yErIbUcF46z",
     },
     {
         id: 5,
@@ -52,7 +54,8 @@ const topAnimeActions = [
         videoSrc: "/assets/vids/blackcl_edit.mp4",
         imgSrc: "/assets/imgs/topanime-bleackclover.jpeg",
         className: "blackcl",
-        bestMomentSrc: "https://www.youtube.com/embed/r9za-dDhYgw?si=oBRkP5pV-1M1JKwm",
+        bestMomentSrc:
+            "https://www.youtube.com/embed/r9za-dDhYgw?si=oBRkP5pV-1M1JKwm",
     },
 ];
 
@@ -97,15 +100,18 @@ function Top5AnimeActions({ isInView }) {
                         "<span>{name}</span> {description}"
                     </p>
                     <div className="top-anime__btns">
-                        <button className="top-anime__btn--primary btn btn--primary">
-                            Details
-                        </button>
                         <button
                             onClick={() => setClickedVideo(id)}
-                            className="top-anime__btn--secondary btn btn--primary-ghost"
+                            className="top-anime__btn--primary btn btn--primary"
                         >
                             Best Moments
                         </button>
+                        {/* <button
+                            
+                            className="top-anime__btn--secondary btn btn--primary-ghost"
+                        >
+                            Detalils
+                        </button> */}
                     </div>
                     <div className="top-anime__media-box">
                         <img
