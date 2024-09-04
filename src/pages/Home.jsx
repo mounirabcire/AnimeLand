@@ -20,7 +20,7 @@ function Home() {
         target: containerRef,
         offset: ["start start", "end end"],
     });
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-90%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-81%"]);
 
     // useMotionValueEvent(scrollYProgress, "change", (latest) => {
     // console.log(latest);
