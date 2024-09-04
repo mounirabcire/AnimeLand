@@ -11,6 +11,7 @@
     min-width: 98vw;
     display: flex;
     gap: 1.6rem;
+    position: relative;
     scroll-snap-align: start;
     @include respond(ph-l) {
         position: relative;
@@ -20,6 +21,7 @@
         margin-block: auto;
         flex: 0 1 50%;
         height: 98vh;
+        position: relative;
 
         @include respond(ph-l) {
             position: absolute;
@@ -74,7 +76,7 @@
             width: 100%;
             font-size: 5.8rem;
             letter-spacing: 1.2rem;
-            -webkit-text-stroke: 1px var(--black-color);
+            -webkit-text-stroke: 1px var(--white-color);
         }
     }
 
@@ -85,11 +87,19 @@
         line-height: 1.8;
         font-size: 1.4rem;
         font-weight: 300;
+        background-color: var(--black-color);
+        color: var(--white-color);
 
         span {
             font-size: 1.8rem;
             font-weight: 600;
             color: var(--primary-color);
+        }
+
+        @include respond(ph-l) {
+            background-color: rgba(#000000, 0.2);
+            backdrop-filter: blur(7px);
+            -webkit-backdrop-filter: blur(7px);
         }
     }
 
@@ -123,7 +133,7 @@
 }
 
 .best-moments {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -160,4 +170,8 @@
         height: 100%;
         cursor: pointer;
     }
+}
+
+.battles__container .best-moments {
+    position: fixed;
 }

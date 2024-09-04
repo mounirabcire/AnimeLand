@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import VideoPlayer from "../components/VideoPlayer";
 
 const battleBoxes = [
@@ -81,52 +81,33 @@ function HeadToHeadBattles() {
 
     return (
         <div className="battles__container">
-            {battleBoxes.map(
-                (
-                    {
-                        id,
-                        imgSrc,
-                        altText,
-                        animeName,
-                        battleName,
-                        epicWords,
-                        src,
-                    },
-                    i
-                ) => (
-                    <>
-                        <div key={id} className="battle__box">
-                            <div className="battle__img-box">
-                                <img
-                                    src={imgSrc}
-                                    alt={altText}
-                                    className="battle__img"
-                                />
-                            </div>
-                            <h5 className="battle__anime-name">{animeName}</h5>
-                            <h3 className="battle__name scale-step-4">
-                                {battleName}
-                            </h3>
-                            <div className="battle__epic-words">
-                                <h6>EPIC WORDS</h6>
-                                <p>“{epicWords}”</p>
-                            </div>
-                            <button
-                                onClick={() => setClickedVideo(id)}
-                                className="btn btn--primary battle__btn"
-                            >
-                                Watch Now
-                            </button>
+            {battleBoxes.map(({ id, imgSrc, altText, animeName, battleName, epicWords, src }) => (
+                <Fragment key={id}>
+                    <div className="battle__box">
+                        <div className="battle__img-box">
+                            <img src={imgSrc} alt={altText} className="battle__img" />
                         </div>
-                        {clickedVideo === id && (
-                            <VideoPlayer
-                                handleClick={() => setClickedVideo(null)}
-                                src={src}
-                            />
-                        )}
-                    </>
-                )
-            )}
+                        <h5 className="battle__anime-name">{animeName}</h5>
+                        <h3 className="battle__name scale-step-4">{battleName}</h3>
+                        <div className="battle__epic-words">
+                            <h6>EPIC WORDS</h6>
+                            <p>“{epicWords}”</p>
+                        </div>
+                        <button
+                            onClick={() => setClickedVideo(id)}
+                            className="btn btn--primary battle__btn"
+                        >
+                            Watch Now
+                        </button>
+                    </div>
+                    {clickedVideo === id && (
+                        <VideoPlayer
+                            handleClick={() => setClickedVideo(null)}
+                            src={src}
+                        />
+                    )}
+                </Fragment>
+            ))}
         </div>
     );
 }

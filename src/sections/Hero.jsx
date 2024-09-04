@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import TopBattlesList from "./../components/TopBattlesList";
 
 const battles = [
@@ -34,8 +33,10 @@ const battles = [
         car2Img: "/assets/imgs/header-fushi.png",
     },
 ];
+
 function Hero() {
     const [isMuted, setIsMuted] = useState(true);
+    const [isLoading, setIsLoading] = useState(true); // State to manage loading
     const video = useRef(null);
 
     function toggleSound() {
@@ -43,6 +44,7 @@ function Hero() {
         videoEl.muted = !videoEl.muted;
         setIsMuted(videoEl.muted);
     }
+
     function toggleExpandVideo() {
         const videoEl = video.current;
         if (videoEl.requestFullscreen) {
@@ -57,6 +59,18 @@ function Hero() {
             // IE/Edge
             videoEl.msRequestFullscreen();
         }
+    }
+
+    function handleVideoLoadStart() {
+        setIsLoading(true); // Show loader when video starts loading
+    }
+
+    function handleVideoCanPlay() {
+        setIsLoading(false); // Hide loader when video can start playing
+    }
+
+    function handleVideoCanPlayThrough() {
+        setIsLoading(false); // Hide loader when video is fully loaded
     }
 
     return (
@@ -78,15 +92,22 @@ function Hero() {
                     </div>
                 </div>
                 <div className="header--right header--right--sm">
+                    {isLoading && (
+                        <div className="loader">
+                            The video is loading, please wait...
+                        </div>
+                    )}
                     <video
-                        // ref={video}
+                        ref={video}
                         autoPlay
                         loop
                         playsInline
                         controls={false}
-                        // muted={isMuted}
-                        muted
+                        muted={isMuted}
                         className="header__video header__video--onepiece"
+                        onLoadStart={handleVideoLoadStart}
+                        onCanPlay={handleVideoCanPlay}
+                        onCanPlayThrough={handleVideoCanPlayThrough}
                     >
                         <source
                             src="/assets/vids/zoro_edit.mp4"
@@ -122,17 +143,22 @@ function Hero() {
                 </div>
             </div>
             <div className="header--right header--right--lg">
+                {isLoading && (
+                    <div className="loader">
+                        The video is loading, please wait...
+                    </div>
+                )}
                 <video
                     ref={video}
                     autoPlay
                     loop
                     muted={isMuted}
                     className="header__video header__video--onepiece"
+                    onLoadStart={handleVideoLoadStart}
+                    onCanPlay={handleVideoCanPlay}
+                    onCanPlayThrough={handleVideoCanPlayThrough}
                 >
-                    <source
-                        src="/assets/vids/zoro_edit.mp4"
-                        type="video/mp4"
-                    />
+                    <source src="/assets/vids/zoro_edit.mp4" type="video/mp4" />
                     Your browser is too old!
                 </video>
 

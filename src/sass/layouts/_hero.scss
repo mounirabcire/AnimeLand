@@ -43,8 +43,8 @@
     &__top-battles {
         margin-block: 3.2rem;
 
-        @include respond(ph-l){
-        margin-block: calc(3.2rem - 8px);
+        @include respond(ph-l) {
+            margin-block: calc(3.2rem - 8px);
         }
     }
 

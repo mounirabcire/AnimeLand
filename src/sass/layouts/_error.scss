@@ -1,0 +1,12 @@
+.error {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__msg{
+        width: 100%;
+        max-width: 65%;
+    }
+}

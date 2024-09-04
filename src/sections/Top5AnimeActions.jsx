@@ -59,8 +59,21 @@ const topAnimeActions = [
     },
 ];
 
-function Top5AnimeActions({ isInView }) {
+function Top5AnimeActions() {
     const [clickedVideo, setClickedVideo] = useState(null);
+    const [isLoading, setIsLoading] = useState(true); // State to manage loading
+
+    function handleVideoLoadStart() {
+        setIsLoading(true); // Show loader when video starts loading
+    }
+
+    function handleVideoCanPlay() {
+        setIsLoading(false); // Hide loader when video can start playing
+    }
+
+    function handleVideoCanPlayThrough() {
+        setIsLoading(false); // Hide loader when video is fully loaded
+    }
 
     return topAnimeActions.map(
         ({
@@ -74,11 +87,19 @@ function Top5AnimeActions({ isInView }) {
         }) => (
             <section className={`top-anime`} key={id}>
                 <div className={`top-anime__left top-anime__${className}`}>
+                    {isLoading && (
+                        <div className="loader">
+                            The video is loading, please wait...
+                        </div>
+                    )}
                     <video
                         autoPlay
                         loop
                         playsInline
                         muted
+                        onLoadStart={handleVideoLoadStart}
+                        onCanPlay={handleVideoCanPlay}
+                        onCanPlayThrough={handleVideoCanPlayThrough}
                         className="top-anime__video"
                     >
                         <source src={videoSrc} type="video/mp4" />
@@ -86,14 +107,7 @@ function Top5AnimeActions({ isInView }) {
                     </video>
                 </div>
                 <div className="top-anime__right">
-                    <h3
-                        className="top-anime__name scale-step-6"
-                        style={{
-                            WebkitTextStroke: isInView
-                                ? "2px var(--white-color)"
-                                : "2px var(--black-color)",
-                        }}
-                    >
+                    <h3 className="top-anime__name scale-step-6">
                         {name.toUpperCase()}
                     </h3>
                     <p className="top-anime__description">
@@ -106,12 +120,6 @@ function Top5AnimeActions({ isInView }) {
                         >
                             Best Moments
                         </button>
-                        {/* <button
-                            
-                            className="top-anime__btn--secondary btn btn--primary-ghost"
-                        >
-                            Detalils
-                        </button> */}
                     </div>
                     <div className="top-anime__media-box">
                         <img

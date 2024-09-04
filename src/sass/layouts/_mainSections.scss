@@ -8,7 +8,7 @@
 
 .scroll-into {
     margin-top: 3.2rem;
-    height: 350vh;
+    height: 650vh;
     position: relative;
 
     &__container {
@@ -19,9 +19,9 @@
         position: sticky;
         top: 0;
         overflow: hidden;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
+        // overflow-x: scroll;
+        // scroll-snap-type: x mandatory;
+        // scroll-behavior: smooth;
         scrollbar-width: 0px; /* Hide scrollbar for Firefox */
         -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
 

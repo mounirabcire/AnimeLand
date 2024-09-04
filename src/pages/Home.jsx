@@ -1,13 +1,15 @@
+import { useRef } from "react";
 import {
     motion,
     useInView,
     useMotionValueEvent,
     useScroll,
+    useTransform,
 } from "framer-motion";
+
 import NavBar from "../components/NavBar";
 import Hero from "../sections/Hero";
 import Top5AnimeActions from "../sections/Top5AnimeActions";
-import { useRef } from "react";
 import HeadToHeadBattles from "../sections/HeadToHeadBattles";
 import Footer from "../sections/Footer";
 
@@ -18,27 +20,22 @@ function Home() {
         target: containerRef,
         offset: ["start start", "end end"],
     });
-    const isInView = useInView(containerRef, {
-        amount: 0.2,
-    });
+    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-90%"]);
 
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        // console.log(latest);
-
-        const scrollContainer = scrollarRef.current;
-        if (scrollContainer) {
-            const maxScrollLeft =
-                scrollContainer.scrollWidth - scrollContainer.clientWidth;
-            const scrollLeft = latest * maxScrollLeft;
-
-            // Debugging: Log calculated scrollLeft and maxScrollLeft
-            // console.log(
-            //     `scrollLeft: ${scrollLeft}, maxScrollLeft: ${maxScrollLeft}`
-            // );
-
-            scrollContainer.scrollLeft = scrollLeft;
-        }
-    });
+    // useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    // console.log(latest);
+    // const scrollContainer = scrollarRef.current;
+    // if (scrollContainer) {
+    //     const maxScrollLeft =
+    //         scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    //     const scrollLeft = latest * maxScrollLeft;
+    //     // Debugging: Log calculated scrollLeft and maxScrollLeft
+    //     // console.log(
+    //     //     `scrollLeft: ${scrollLeft}, maxScrollLeft: ${maxScrollLeft}`
+    //     // );
+    //     scrollContainer.scrollLeft = scrollLeft;
+    // }
+    // });
 
     return (
         <>
@@ -52,19 +49,8 @@ function Home() {
                 </h2>
                 <div className="scroll-into" ref={containerRef}>
                     <div className="scroll-into__container" ref={scrollarRef}>
-                        <motion.div
-                            className="top-animes"
-                            animate={{
-                                backgroundColor: isInView
-                                    ? "var(--black-color)"
-                                    : "var(--white-color)",
-                                color: isInView
-                                    ? "var(--white-color)"
-                                    : "var(--black-color)",
-                            }}
-                            style={{}}
-                        >
-                            <Top5AnimeActions isInView={isInView} />
+                        <motion.div className="top-animes" style={{ x }}>
+                            <Top5AnimeActions />
                         </motion.div>
                     </div>
                 </div>
