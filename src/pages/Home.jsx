@@ -22,6 +22,8 @@ function Home() {
     });
     const x = useTransform(scrollYProgress, [0, 1], ["0%", "-81%"]);
 
+    // **** IMPLEMENT SMOOTH SCROLLING ****
+
     // useMotionValueEvent(scrollYProgress, "change", (latest) => {
     // console.log(latest);
     // const scrollContainer = scrollarRef.current;
