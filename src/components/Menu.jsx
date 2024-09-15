@@ -83,16 +83,30 @@ const sepVariants = {
 };
 
 const links = [
-    { name: "One Piece", src: "/assets/imgs/menu-onepiece.png" },
-    { name: "Bleach", src: "/assets/imgs/menu-bleach.png" },
+    {
+        name: "One Piece",
+        src: "/assets/imgs/menu-onepiece.png",
+        href: "https://www.imdb.com/title/tt0388629/?ref_=vp_close",
+    },
+    {
+        name: "Bleach",
+        src: "/assets/imgs/menu-bleach.png",
+        href: "https://www.imdb.com/title/tt0434665/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_Bleach",
+    },
     {
         name: "Dragon Ball Super",
         src: "/assets/imgs/menu-dbsuper.png",
+        href: "https://www.imdb.com/title/tt4644488/?ref_=nv_sr_srsg_0_tt_8_nm_0_in_0_q_Dragon%2520ball%2520sup",
     },
-    { name: "Jujutsu Kaisen", src: "/assets/imgs/menu-jjk.png" },
+    {
+        name: "Jujutsu Kaisen",
+        src: "/assets/imgs/menu-jjk.png",
+        href: "https://www.imdb.com/title/tt12343534/?ref_=nv_sr_srsg_0_tt_2_nm_6_in_0_q_JJK",
+    },
     {
         name: "Black Clover",
         src: "/assets/imgs/menu-blacklclover.png",
+        href: "https://www.imdb.com/title/tt7441658/?ref_=nv_sr_srsg_0_tt_7_nm_1_in_0_q_Black%2520Clover",
     },
 ];
 
