@@ -1,5 +1,9 @@
 # AnimeLand
 
+<div>
+    <img src='./public/assets/imgs/app_overview.png' alt="app preview">
+</div>
+
 ## About 🚀
 - **Anime Land** is a website dedicated to showcasing the most unforgettable anime fights and action-packed moments! Whether you're a fan of intense 1 vs 1 battles or jaw-dropping key scenes, this site has it all. I combined my love for anime with web development to bring these epic moments to life.
 
